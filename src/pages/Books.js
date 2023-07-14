@@ -7,6 +7,7 @@ function Books() {
     <div style={{ backgroundColor: '#fafafa' }}>
       <BookList />
       <AddBook />
+      <br />
     </div>
   );
 }

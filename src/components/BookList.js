@@ -7,7 +7,7 @@ function BookList() {
       <Book />
       <Book />
       <Book />
-
+      <hr />
     </>
   );
 }

@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c7c6c6;
 }
 
 .nav-list,
@@ -11,7 +11,7 @@ nav {
 }
 
 .logo {
-  color: rgb(63, 119, 248);
+  color: rgb(60, 116, 248);
 }
 
 .nav-list-item {

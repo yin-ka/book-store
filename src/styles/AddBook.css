@@ -1,5 +1,5 @@
 .form-wrapper {
-    padding: 20px 40px;
+    padding: 10px 40px;
 }
 
 .add-head {
@@ -7,7 +7,7 @@
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: -0.18px;
-  color: #888;
+  color: rgb(151, 151, 151);
 }
 
 .add-book {
@@ -27,7 +27,7 @@
 
 .add-button {
     color: #fff;
-    background-color: #4386bf;
+    background-color: #4992d2;
     padding: 5px 15px;
     width: 15%;
 }
