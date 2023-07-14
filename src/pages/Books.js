@@ -4,10 +4,10 @@ import AddBook from '../components/AddBook';
 
 function Books() {
   return (
-    <>
+    <div style={{ backgroundColor: '#fafafa' }}>
       <BookList />
       <AddBook />
-    </>
+    </div>
   );
 }
 
