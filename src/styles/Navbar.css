@@ -25,6 +25,7 @@ nav {
   opacity: 0.4;
   cursor: pointer;
   font-weight: 600;
+  color: #040404;
 }
 
 .active {

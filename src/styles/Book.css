@@ -1,9 +1,10 @@
 .book-wrapper {
-  margin: 10px 40px;
+  margin: 35px 40px;
   padding: 20px;
   border: 1px solid #9f9f9f;
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 .book-info,

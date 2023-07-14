@@ -1,9 +1,9 @@
 import React from 'react';
-import Book from '../components/Book';
+import BookList from '../components/BookList';
 
 function Books() {
   return (
-    <Book />
+    <BookList />
   );
 }
 
