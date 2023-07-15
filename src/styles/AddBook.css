@@ -1,0 +1,33 @@
+.form-wrapper {
+  padding: 10px 40px;
+}
+
+.add-head {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: rgb(151, 151, 151);
+}
+
+.add-book {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-one {
+  padding: 10px;
+  width: 55%;
+}
+
+.input-two {
+  padding: 10px;
+  width: 20%;
+}
+
+.add-button {
+  color: #fff;
+  background-color: #3480c3;
+  padding: 5px 15px;
+  width: 15%;
+}
