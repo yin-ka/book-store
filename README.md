@@ -105,22 +105,6 @@ This is a React App that provided by Microverse for the purpose of learning and 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- WalkThrough Video -->
-
-## 🦻 WalkThrough Video <a name="#walkthrough-demo"></a>
-
-- 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
