@@ -109,7 +109,7 @@ This is a React App that provided by Microverse for the purpose of learning and 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
--  Comming Soon...
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +117,7 @@ This is a React App that provided by Microverse for the purpose of learning and 
 
 ## 🦻 WalkThrough Video <a name="#walkthrough-demo"></a>
 
--  Comming Soon...
+- 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
