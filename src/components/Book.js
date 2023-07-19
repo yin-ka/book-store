@@ -5,12 +5,12 @@ import '../styles/Book.css';
 import PropTypes from 'prop-types';
 
 function Book({
-  genre, title, author, progress, status,
+  category, title, author,
 }) {
   return (
     <div className="book-wrapper">
       <div className="book-info">
-        <p className="book-genre">{genre}</p>
+        <p className="book-genre">{category}</p>
         <p className="book-title">{title}</p>
         <p className="book-author">{author}</p>
         <ul className="book-actions">
@@ -21,13 +21,13 @@ function Book({
       </div>
       <div className="progress-wrapper">
         <div className="book-progress">
-          <div className="book-progress-bar"><CircularProgressbar value={progress} /></div>
+          <div className="book-progress-bar"><CircularProgressbar value={50} /></div>
           <div className="book-progress-data">
             <div className="book-progress-percentage">
-              {progress}
+              {50}
               %
             </div>
-            <div className="book-progress-status">{status}</div>
+            <div className="book-progress-status">completed</div>
           </div>
         </div>
         <div className="book-current">
@@ -40,18 +40,14 @@ function Book({
   );
 }
 Book.defaultProps = {
-  genre: '',
+  category: '',
   title: '',
   author: '',
-  progress: '',
-  status: '',
 };
 Book.propTypes = {
-  genre: PropTypes.string,
+  category: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
-  progress: PropTypes.string,
-  status: PropTypes.string,
 };
 
 export default Book;
