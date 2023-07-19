@@ -1,38 +1,24 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
+import { removeBook } from '../redux/books/booksSlice';
 
-const booksArr = [
-  {
-    genre: 'Action',
-    title: 'The Hunger games',
-    author: 'Sizanne collins',
-    progress: '64',
-    status: 'Completed',
-  }, {
-    genre: 'Fiction',
-    title: 'Fetisious Fantancy',
-    author: 'Yusuf Sholotan',
-    progress: '8',
-    status: 'Pending',
-  }, {
-    genre: 'Romance',
-    title: 'My Heart is Yours',
-    author: 'Amidat Abdulgaffar',
-    progress: '0',
-    status: 'Pending',
-  },
-];
 function BookList() {
+  const booksArr = useSelector((state) => state.book.books);
+  const dispatch = useDispatch();
+  const clickHandler = (e) => {
+    dispatch(removeBook(e.target.id));
+  };
   return (
     <>
       {booksArr.map((book) => (
         <Book
-          key={book.title + book.genre}
-          genre={book.genre}
+          key={book.itemId + book.title}
+          id={book.itemId}
+          category={book.category}
           title={book.title}
           author={book.author}
-          progress={book.progress}
-          status={book.status}
+          onClick={clickHandler}
         />
       ))}
       <hr />
