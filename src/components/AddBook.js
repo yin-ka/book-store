@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 import '../styles/AddBook.css';
+import Button from './Button';
 
 function AddBook() {
   const [title, setTitle] = useState('');
@@ -23,7 +24,7 @@ function AddBook() {
       <form className="add-book">
         <input type="text" name="title" placeholder="Book Title" className="input-one" onChange={(e) => setTitle(e.target.value)} />
         <input type="text" name="author" placeholder="Book Author" className="input-two" onChange={(e) => setAuthor(e.target.value)} />
-        <button type="submit" className="add-button" onClick={(e) => { clickHandler(e); }}>ADD BOOK</button>
+        <Button className="add-button" onClick={clickHandler} title="ADD BOOK" />
       </form>
     </div>
   );
