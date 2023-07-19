@@ -1,8 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 function Categories() {
+  const categoriesStatus = useSelector((state) => state.category.status);
   return (
-    <div>Categories</div>
+    <h1 style={{ marginLeft: '3rem' }}>{categoriesStatus}</h1>
   );
 }
 
