@@ -3,6 +3,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import '../styles/Book.css';
 import PropTypes from 'prop-types';
+import Button from './Button';
 
 function Book({
   category, title, author, id, onClick,
@@ -15,7 +16,9 @@ function Book({
         <p className="book-author">{author || 'Unknown'}</p>
         <ul className="book-actions">
           <li className="book-comment"><span>Comments</span></li>
-          <li className="book-remove"><button type="button" id={id} onClick={(e) => onClick(e)}> Remove </button></li>
+          <li className="book-remove">
+            <Button cname="remove-button" id={id} onClick={onClick} title="Remove" />
+          </li>
           <li className="book-edit"><span>Edit</span></li>
         </ul>
       </div>
