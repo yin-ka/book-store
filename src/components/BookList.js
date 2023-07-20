@@ -1,17 +1,28 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Book from './Book';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBook, fetchBooks } from '../redux/books/booksSlice';
 
 function BookList() {
-  const booksArr = useSelector((state) => state.book.books);
+  // const booksArr = useSelector((state) => state.book.books);
+  // const dispatch = useDispatch();
   const dispatch = useDispatch();
+
+  const booksArr = useSelector((state) => state.book.books);
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
+  const transformedData = Object.entries(booksArr).map(([id, items]) => {
+    const [item] = items; // assume there is only one item in each array
+    return { id, ...item };
+  });
   const clickHandler = (e) => {
     dispatch(removeBook(e.target.id));
   };
   return (
     <>
-      {booksArr.map((book) => (
+      {transformedData.map((book) => (
         <Book
           key={book.itemId + book.title}
           id={book.itemId}
