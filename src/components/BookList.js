@@ -9,16 +9,17 @@ function BookList() {
   const booksArr = useSelector((state) => state.book.books);
   const booksStatus = useSelector((state) => state.book.status);
   const booksError = useSelector((state) => state.book.error);
+
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
-  const transformedData = Object.entries(booksArr).map(([itemId, items]) => {
+
+  const transformedData = Object.entries(booksArr).map(([item_id, items]) => {
     const [item] = items;
-    return { itemId, ...item };
+    return { item_id, ...item };
   });
   const clickHandler = (e) => {
     dispatch(removeBook(e.target.id));
-    window.location.reload();
   };
 
   if (booksStatus === 'loading') {

@@ -17,29 +17,34 @@ export const fetchBooks = createAsyncThunk(
 
 export const addBook = createAsyncThunk(
   'books/addBook',
-  async (book) => {
-    const response = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/tmfWTBasohouxTHLU5Dm/books', book);
-    return response.data;
+  async (book, thunkAPI) => {
+    try {
+      await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/tmfWTBasohouxTHLU5Dm/books', book);
+      thunkAPI.dispatch(fetchBooks());
+      const res = thunkAPI.getState().books;
+      return res;
+    } catch (error) {
+      throw new Error('Failed to add book.');
+    }
   },
 );
 
-export const removeBook = createAsyncThunk(
-  'books/removeBook',
-  async (bookId) => {
+export const removeBook = createAsyncThunk('books/removeBook', async (bookId, thunkAPI) => {
+  try {
     await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/tmfWTBasohouxTHLU5Dm/books/${bookId}`);
-    return bookId;
-  },
-);
+    thunkAPI.dispatch(fetchBooks());
+    const res = thunkAPI.getState().books;
+    return res;
+  } catch (error) {
+    throw new Error('Failed to delete book.');
+  }
+});
+
 export const BookSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    // addBook: (state, action) => {
-    //   state.books.push(action.payload);
-    // },
-    // removeBook: (state, action) => {
-    //   state.books = state.books.filter((book) => book.itemId !== action.payload);
-    // },
+
   },
   extraReducers: (builder) => {
     builder
@@ -55,14 +60,12 @@ export const BookSlice = createSlice({
         state.error = action.error.message;
       })
       .addCase(addBook.fulfilled, (state, action) => {
-        state.books.push(action.payload);
+        Object.assign(state.books, action.payload);
       })
       .addCase(removeBook.fulfilled, (state, action) => {
-        state.books = state.books.filter((book) => book.item_id !== action.payload);
+        delete state.books[action.payload];
       });
   },
 });
-
-// export const { addBook, removeBook } = BookSlice.actions;
 
 export default BookSlice.reducer;
