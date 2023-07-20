@@ -5,7 +5,7 @@ function Button({
   id, onClick, cname, title,
 }) {
   return (
-    <button type="button" className={cname} id={id} onClick={(e) => onClick(e)}>
+    <button type="submit" className={cname} id={id} onClick={(e) => onClick(e)}>
       {title}
     </button>
   );

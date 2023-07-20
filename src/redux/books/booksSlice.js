@@ -58,7 +58,7 @@ export const BookSlice = createSlice({
         state.books.push(action.payload);
       })
       .addCase(removeBook.fulfilled, (state, action) => {
-        state.books = state.books.filter((book) => book.id !== action.payload);
+        state.books = state.books.filter((book) => book.item_id !== action.payload);
       });
   },
 });
