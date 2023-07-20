@@ -10,7 +10,7 @@ const initialState = {
 export const fetchBooks = createAsyncThunk(
   'books/fetchBooks',
   async () => {
-    const response = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/WPeNvXOKpKVIrtC9ZwKj/books');
+    const response = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/tmfWTBasohouxTHLU5Dm/books');
     return response.data;
   },
 );

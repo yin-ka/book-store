@@ -4,12 +4,11 @@ import Book from './Book';
 import { removeBook, fetchBooks } from '../redux/books/booksSlice';
 
 function BookList() {
-  // const booksArr = useSelector((state) => state.book.books);
-  // const dispatch = useDispatch();
   const dispatch = useDispatch();
 
   const booksArr = useSelector((state) => state.book.books);
-
+  const booksStatus = useSelector((state) => state.book.status);
+  const booksError = useSelector((state) => state.book.error);
   useEffect(() => {
     dispatch(fetchBooks());
   }, []);
@@ -20,6 +19,19 @@ function BookList() {
   const clickHandler = (e) => {
     dispatch(removeBook(e.target.id));
   };
+
+  if (booksStatus === 'loading') {
+    return (
+      <h1 style={{ marginLeft: '40px' }}>Loading...</h1>
+    );
+  }
+
+  if (booksError !== null) {
+    return (
+      <h1 style={{ marginLeft: '40px' }}>{booksError}</h1>
+    );
+  }
+
   return (
     <>
       {transformedData.map((book) => (
