@@ -7,10 +7,10 @@ import Button from './Button';
 function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-
   const dispatch = useDispatch();
 
-  const clickHandler = () => {
+  const clickHandler = (e) => {
+    e.preventDefault();
     const id = Math.floor(Math.random() * 1000000);
     dispatch(addBook({
       item_id: `itemId${id + 1}`,
@@ -19,6 +19,7 @@ function AddBook() {
       category: 'Action',
     }));
   };
+
   return (
     <div className="form-wrapper">
       <h2 className="add-head">ADD NEW BOOK</h2>
