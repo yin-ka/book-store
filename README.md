@@ -105,6 +105,7 @@ This is a React App that provided by Microverse for the purpose of learning and 
 - **Use react redux**
 - **Use redux toolkit**
 - **Use redux toolkit in Components**
+- **Work with apis**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

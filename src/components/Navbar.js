@@ -10,10 +10,10 @@ function Navbar({ books, categories }) {
         <h2 className="logo">BookStore CMS</h2>
         <ul className="nav-list">
           <li className="nav-list-item">
-            <NavLink to={books} activeClassName="active">BOOKS</NavLink>
+            <NavLink to={books} activeclassname="active">BOOKS</NavLink>
           </li>
           <li className="nav-list-item">
-            <NavLink to={categories} activeClassName="active">CATEGORIES</NavLink>
+            <NavLink to={categories} activeclassname="active">CATEGORIES</NavLink>
           </li>
         </ul>
       </div>
