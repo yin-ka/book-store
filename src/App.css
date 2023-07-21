@@ -1,3 +1,7 @@
-.App {
-  color: aqua;
+* {
+  font-family: 'RobotoSlab', sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
 }

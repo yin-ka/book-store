@@ -46,7 +46,7 @@ function BookList() {
           onClick={clickHandler}
         />
       ))}
-      <hr />
+      <hr style={{ margin: '40px 40px 0px 40px' }} />
     </>
   );
 }

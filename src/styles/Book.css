@@ -56,6 +56,16 @@
   color: #4386bf;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 .book-remove {
   border-left: 1px solid #9f9f9f;
   border-right: 1px solid #9f9f9f;
@@ -72,11 +82,13 @@
   display: flex;
   padding-top: 20px;
   border-right: 1px solid #9f9f9f;
+  height: 4.5rem;
+  margin: 20px 0;
 }
 
 .book-progress-bar {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
 }
 
 .book-progress-percentage {

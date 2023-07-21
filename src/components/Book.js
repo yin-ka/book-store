@@ -17,7 +17,7 @@ function Book({
         <ul className="book-actions">
           <li className="book-comment"><span>Comments</span></li>
           <li className="book-remove">
-            <Button cname="remove-button" id={id} onClick={onClick} title="Remove" />
+            <Button classname="remove-button" id={id} onClick={onClick} title="Remove" />
           </li>
           <li className="book-edit"><span>Edit</span></li>
         </ul>
