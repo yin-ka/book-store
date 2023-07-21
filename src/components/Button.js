@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Button({
-  id, onClick, cname, title,
+  id, onClick, classname, title,
 }) {
   return (
-    <button type="submit" className={cname} id={id} onClick={(e) => onClick(e)}>
+    <button type="submit" className={classname} id={id} onClick={(e) => onClick(e)}>
       {title}
     </button>
   );
@@ -13,13 +13,13 @@ function Button({
 
 Button.defaultProps = {
   title: '',
-  cname: '',
+  classname: '',
   id: '',
   onClick: '',
 };
 Button.propTypes = {
   title: PropTypes.string,
-  cname: PropTypes.string,
+  classname: PropTypes.string,
   id: PropTypes.string,
   onClick: PropTypes.func,
 };

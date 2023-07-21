@@ -26,7 +26,7 @@ function AddBook() {
       <form className="add-book">
         <input type="text" name="title" placeholder="Book Title" className="input-one" onChange={(e) => setTitle(e.target.value)} />
         <input type="text" name="author" placeholder="Book Author" className="input-two" onChange={(e) => setAuthor(e.target.value)} />
-        <Button className="add-button" onClick={clickHandler} title="ADD BOOK" />
+        <Button classname="add-button" onClick={clickHandler} title="ADD BOOK" />
       </form>
     </div>
   );
